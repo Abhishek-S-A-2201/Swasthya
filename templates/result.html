@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Creative Studio landing page.">
+    <meta name="author" content="Devcrud">
+    <title>AddMed|Swasthya</title>
+    <style> 
+        input[type=text] {
+          width: 100%;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+          background-color: white;
+         
+          background-position: 10px 10px; 
+          background-repeat: no-repeat;
+          padding: 12px 20px 12px 40px;
+        }
+        input[type="file"]::file-selector-button {
+            border: 1px solid #535252;
+            color: rgb(255, 255, 255);
+            width: 65px;
+            margin-left: 40px;
+
+
+            border-radius: 0.5em;
+            background-color: #f04747;
+          }
+          
+          input[type="file"]::file-selector-button:hover {
+            background-color: #e0f7f6;
+            border: 2px solid #ce0000;
+            color: rgb(13, 2, 2);
+
+          }
+            h1 {
+                text-align: center;
+                color:whitesmoke;
+            }
+          img{
+            width:100px;
+            margin-top: 10px;
+          }
+          
+            
+    </style>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{url_for('static', filename='vendors/themify-icons/css/themify-icons.css')}}">
+
+    <!-- Bootstrap + Creative Studio main styles -->
+	<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Page Navigation -->
+     <!-- Page Navigation -->
+     <nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{url_for('static', filename='imgs/logo.png')}}" alt=" ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary btn-sm ml-lg-3" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Navigation -->
+    
+    <header class="header">
+        <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+
+    <br>
+  
+    <h1  class="title"> Medicine Analysed results</h1>
+    
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+            <div class="box text-center">
+                <div class="box-item">
+                    <a class="navbar-brand" href="#">
+                        <img class="tab" src="{{url_for('static', filename='imgs/tablet.png')}}" alt=" ">
+                    </a>
+                    <br>
+                    <br>
+                    <br>
+                    <h6 class="box-title">Tablet Name: </h6>
+                    <p><b>{{details.tablet}}</b>
+                        </p>
+                </div>
+                <div class="box-item">
+                    <a class="navbar-brand" href="#">
+                        <img src="{{url_for('static', filename='imgs/expire.png')}}" alt=" ">
+                    </a>
+                    <h6 class="box-title">Expires on: </h6>
+                    <p>{{details.expiry}}</p>               </div>
+                <div class="box-item">
+                    <a class="navbar-brand" href="#">
+                        <img src="{{url_for('static', filename='imgs/note.png')}}" alt=" ">
+                    </a>                    <h6 class="box-title">Prescribed for: </h6>
+
+                        <b><p>{{details.description}}</p></b>
+                     
+                    
+                </div>
+                
+            </div>
+            <!-- End of Box -->
+                   
+             
+    </header>
+    <!-- End Of Page Header -->
+
+    <!-- Box -->
+    
+    <footer class="bg-dark text-center text-white">
+       
+      
+        <!-- Copyright -->
+        
+          <br>
+          <br>
+          <br>
+
+          
+
+
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Swasthya <br>
+          <br>
+          <br>
+
+
+
+
+          <!-- <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
+        </div>
+        <!-- Copyright -->
+      </footer>
+   
+ <!-- core  -->
+ <script src="{{url_for('static', filename='vendors/jquery/jquery-3.4.1.js')}}"></script>
+ <script src="{{url_for('static', filename='vendors/bootstrap/bootstrap.bundle.js')}}"></script>
+
+ <!-- bootstrap affix -->
+ <script src="{{url_for('static', filename='vendors/bootstrap/bootstrap.affix.js')}}"></script>
+
+ <!-- Creative Studio js -->
+ <script src="{{url_for('static', filename='js/creative-studio.js')}}"></script>
+
+</body>
+</html>

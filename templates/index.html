@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Creative Studio landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Swasthya</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{url_for('static', filename='vendors/themify-icons/css/themify-icons.css')}}">
+
+    <!-- Bootstrap + Creative Studio main styles -->
+	<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Page Navigation -->
+    <!-- Page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{url_for('static', filename='imgs/logo.png')}}" alt=" ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Future Scope</a>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                   
+                    <!-- <li class="nav-item">
+                         <a class="nav-link btn btn-primary btn-sm ml-lg-3" href="components.html">Components</a> 
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <h6 class="subtitle">Small Team With Big Ideas</h6>
+            <h1 class="title">Swas<span style="color: #5CE1E6;">thya</span>
+                </h1>
+            <div class="buttons text-center">
+                <a href="/addmed" class="btn btn-primary rounded w-lg btn-lg my-1">Add Medicine</a>
+                <a href="/find" class="btn btn-outline-light rounded w-lg btn-lg my-1">Find medicine</a>
+            </div>              
+        </div>      
+    </header>
+    <!-- End Of Page Header -->
+
+    <!-- Box -->
+    <div class="box text-center">
+        <div class="box-item">
+            <i class="ti-vector"></i>
+            <h6 class="box-title">Why??</h6>
+            <p>A medicine identification app can help users accurately identify and manage their medications, improving healthcare management and well-being.</p>
+        </div>
+        <div class="box-item">
+            <i class="ti-filter"></i>
+            <h6 class="box-title">Know Me</h6>
+            <p>The app allows users to access information about their tablets, create personalized lists, and set reminders for dosing schedules.</p>
+        </div>
+        <div class="box-item">
+            <i class="ti-mobile"></i>
+            <h6 class="box-title">Use case</h6>
+            <p>This can help users avoid confusion and potentially dangerous situations, and feel more confident and in control of their healthcare routine.</p>
+        </div>
+    </div>
+    <!-- End of Box -->
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 col-lg-4">
+                    <img src="{{url_for('static', filename='imgs/about.jpg')}}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page" class="w-100 img-thumbnail mb-3">
+                </div>
+                <div class="col-md-7 col-lg-8">
+                    <h6 class="section-subtitle mb-0">Introduction</h6>
+                    <h6 class="section-title mb-3">Swasthya</h6>
+                    <p>Welcome to Swasthya, our medicine identification app! Our app helps you identify any medication, simply by scanning the medicine. </p>
+                    <p>We provide information about the medication, including its name, purpose, and potential side effects. </p>
+                    <p> You can also create a personalized list of all your medications and set reminders to manage your healthcare routine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Section -->
+
+   
+
+    <!-- Service Section -->
+    <section id="service">
+        <div class="container">
+            <!-- <h6 class="section-subtitle text-center">Makes Happen</h6> -->
+            <h5 class="section-title text-center mb-6">Future Scope</h5> 
+            <div class="row">
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-filter text-primary"></i></h2>
+                            <h6 class="card-title">CV based identification</h6>
+                            <p>Computer Vision model to identify features between two medicinal strips and identify the medicine.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-paint-roller text-primary"></i></h2>
+                            <h6 class="card-title">NLP based model</h6>
+                            <p>Machine Learning model, which identifies the medicine based on the information provided behind the medicine strip.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-ruler-pencil text-primary"></i></h2>
+                            <h6 class="card-title">Detailed Information</h6>
+                            <p>Provide all the details related to a particular medicine, such as, expiry date and possible side effects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h2 class="mb-4"><i class="ti-layers text-primary"></i></h2>
+                            <h6 class="card-title">Reminders</h6>
+                            <p>Set reminders to take the medicine at the prescribed dosage and in the right time.</p>
+                        </div>
+                    </div>
+                </div>
+              
+
+            </div>  
+        </div>
+    </section>
+    <!-- End of Service Section -->
+
+   
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h6 class="section-subtitle text-center">Meet With</h6>
+            <h6 class="section-title mb-5 text-center">Our Team</h6>
+            <div class="row">
+                <div class="col-sm-6 col-lg-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="{{url_for('static', filename='imgs/avatar.jpg')}}">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">Member</h6>
+                            <h5 class="card-title">Namitha </h5>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p> -->
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="{{url_for('static', filename='imgs/avatar-1.jpg')}}">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">Member</h6>
+                            <h5 class="card-title">Abhishek S A</h5>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p> -->
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6  col-lg-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="{{url_for('static', filename='imgs/avatar-2.jpg')}}">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">Member</h6>
+                            <h5 class="card-title">Likith </h5>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p> -->
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-md-4">
+                    <div class="card text-center mb-4">
+                        <img class="card-img-top inset" src="{{url_for('static', filename='imgs/avatar-3.jpg')}}">
+                        <div class="card-body">
+                            <h6 class="small text-primary font-weight-bold">Member</h6>
+                            <h5 class="card-title">Niranthar</h5>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quos esse tenetur illo qui, nostrum.</p> -->
+                           
+                        </div>
+                    </div>
+                </div>
+               
+                
+
+            </div>
+        </div>
+    </section>
+    <!-- End of Team Sectoin -->
+
+   
+
+   
+
+   <section>
+    <footer class="bg-dark text-center text-white">
+       
+      
+        <!-- Copyright -->
+        
+          <br>
+          <br>
+          <br>
+
+          
+
+
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Swasthya <br>
+          <br>
+          <br>
+
+
+
+
+          <!-- <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
+        </div>
+        <!-- Copyright -->
+      </footer>
+   </section>
+
+    <!-- core  -->
+    <script src="{{url_for('static', filename='vendors/jquery/jquery-3.4.1.js')}}"></script>
+    <script src="{{url_for('static', filename='vendors/bootstrap/bootstrap.bundle.js')}}"></script>
+
+    <!-- bootstrap affix -->
+    <script src="{{url_for('static', filename='vendors/bootstrap/bootstrap.affix.js')}}"></script>
+
+    <!-- Creative Studio js -->
+    <script src="{{url_for('static', filename='js/creative-studio.js')}}"></script>
+
+</body>
+</html>
