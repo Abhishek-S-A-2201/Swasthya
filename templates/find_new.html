@@ -76,50 +76,43 @@ img{
         <br>
         <br>
         <br><div class="main container">
-        <div class="row">
-            <div class="col ">
-                     <div class="video-wrap">
-                        <video src="" id="video" playsinline autoplay></video>
-                     </div>
-                     <!-- trigger canvas web api -->
-                     <div class="controller"><button class="btn btn-primary rounded btn-lg ml-lg-3" id="snap">Capture</button>
-                    </div>
-                </div>
-<!-- webcam video snapshot -->
-<div class="col  ">
-<canvas id="canvas" width="250" height="250"><img src="{{url_for('static', filename='imgs/scane.png')}}" alt="">
-</canvas>
-<div class="controller"><button class="btn btn-primary rounded btn-lg ml-lg-3">Analyse</button>   </div>                 </div>
-<div class="col  ">
-  <a href="/result">  <button type="button" class="btn btn-info rounded btn-lg lo">Result</button>
-  </a></div>
-</div>
-</div>
 
-</div>
-</div>              
-    </header>
+            <div class="col ">
+
+                <div class="box-item">
+                    <form action="/find" method="POST" enctype="multipart/form-data">
+                    <a class="navbar-brand" href="#">
+                        <img src="{{url_for('static', filename='imgs/upload.png')}}" alt=" ">
+                    </a>
+                    <br>
+
+                    <h6 class="box-title">Upload SCANNED Image</h6>
+                    <div class="buttons text-center">
+                        <label for="urfile">
+
+                        </label>
+                    <input type="file" id="urfile" name="urfile" multiple><br><br>
+                        <button class="btn  btn-primary rounded w-sm btn-sm my-1" type="submit">submit</button>
+                    </div>
+</form>
+            </div>
+
+            </div>
+
+                </div>
+            </form>
+        </header>
     <!-- End Of Page Header -->
     <footer class="bg-dark text-center text-white">
-       
-      
         <!-- Copyright -->
         
           <br>
           <br>
           <br>
-
-          
-
-
           <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Swasthya <br>
           <br>
           <br>
-
-
-
-
           <!-- <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> -->
         </div>
         <!-- Copyright -->
