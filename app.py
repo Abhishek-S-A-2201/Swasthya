@@ -48,16 +48,32 @@ def addmed():
         return render_template('addmed.html')
 
 
-@app.route('/find')
+@app.route('/find/', methods=['POST', 'GET'])
 def find():
     if request.method == 'POST':
-        details = {}
+        ur_image = request.files["urfile"]
+        tablet = ""
+        if ur_image != "":
+            ur_path = f"/Users/abhishek/Desktop/Astrics/code/ImageSimilarityDetection/user_tablets/scanned_file.{ur_image.filename.split('.')[1]}"
+            ur_image.save(ur_path)
+            get_image_feature_vectors(ur_path)
+            tablet = find_similarity(ur_path)
+            print(tablet)
+        if tablet is None:
+            details = {
+                "tablet": "None",
+                "expiry": "None",
+                "description": "None"
+            }
+        else:
+            details = db.get_details(tablet)
+            print(details)
         try:
             return render_template('result.html', details=details)
         except:
             return 'There was an issue...'
     else:
-        return render_template('find.html')
+        return render_template('find_new.html')
 
 
 @app.route("/result")
