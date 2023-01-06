@@ -84,12 +84,11 @@ def get_image_feature_vectors(path):
     # Saves the image feature vectors into a file for later use
 
     outfile_name = os.path.basename(path).split('.')[0] + ".npz"
-    out_path = os.path.join('/Users/abhishek/Desktop/Astrics/code/ImageSimilarityDetection/features/test', outfile_name)
+    out_path = os.path.join('/Users/abhishek/Desktop/Astrics/code/ImageSimilarityDetection/user_tablets_features', outfile_name)
 
     # Saves the 'feature_set' to a text file
     np.savetxt(out_path, feature_set, delimiter=',')
 
-    print(f"Image feature vector saved to   : {out_path}")
     return out_path
 
 

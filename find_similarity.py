@@ -33,14 +33,28 @@ def cosine(vec_1, vec_2):
 
 def find_similarity(path):
 
+    datafiles = glob.glob('/Users/abhishek/Desktop/Astrics/code/ImageSimilarityDetection/user_tablets_features/*.npz')
     allfiles = glob.glob('/Users/abhishek/Desktop/Astrics/code/ImageSimilarityDetection/features/*.npz')
-    similarities = []
     out_path = get_image_feature_vectors(path)
     vec_1 = np.loadtxt(out_path)
-    max_sim = 0
+    max_sum = 0
     img_path = ""
-    score = []
-    ssim_value = 0
+    for file in datafiles:
+        outfile_name = os.path.basename(file).split('.')[0] + ".jpeg"
+        image_path = os.path.join("/Users/abhishek/Desktop/Astrics/code/ImageSimilarityDetection/tablets", outfile_name)
+        vec_2 = np.loadtxt(file)
+        ssim_value = ssim_score(path, image_path)
+        cosine_score = cosine(vec_1, vec_2)
+        similar = [ssim_value, cosine_score]
+        avg_ = sum(similar) / 2
+        if avg_ > max_sum:
+            max_sum = avg_
+            img_path = image_path
+
+    if max_sum > 0.95:
+        tablet = os.path.basename(img_path).split('.')[0]
+        return tablet
+
     for file in allfiles:
         outfile_name = os.path.basename(file).split('.')[0] + ".jpeg"
         image_path = os.path.join("/Users/abhishek/Desktop/Astrics/code/ImageSimilarityDetection/tablets", outfile_name)
@@ -48,14 +62,13 @@ def find_similarity(path):
         ssim_value = ssim_score(path, image_path)
         cosine_score = cosine(vec_1, vec_2)
         similar = [ssim_value, cosine_score]
-        similarities.append(similar)
         avg_ = sum(similar)/2
-        if avg_ > max_sim:
-            max_sim = avg_
+        if avg_ > max_sum:
+            max_sum = avg_
             img_path = image_path
-            score = similar
 
-    tablet = os.path.basename(img_path).split('.')[0]
-    return tablet, img_path, sum(score)/2
-
-
+    if max_sum > 0.95:
+        tablet = os.path.basename(img_path).split('.')[0]
+        return tablet
+    else:
+        return None
